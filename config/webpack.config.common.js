@@ -5,6 +5,7 @@ const HtmlPlugin           = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const helpers              = require('./helpers');
 const isDev                = process.env.NODE_ENV === 'development';
+// const VuetifyLoaderPlugin  = require('vuetify-loader/lib/plugin')
 
 const webpackConfig = {
     entry: {
@@ -57,6 +58,7 @@ const webpackConfig = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        // new VuetifyLoaderPlugin(),
         new HtmlPlugin({ template: 'index.html', chunksSortMode: 'dependency' })
     ]
 };
